@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShowBDD</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        canvas {
+            border: 1px solid black;
+            margin-top: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
+        label,
+        input {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ShowBDD</h1>
+
+    <form id="bddForm">
+        <label for="nodes">Nodes (comma-separated, format: id,variable,low,high):</label>
+        <input type="text" id="nodes" name="nodes" value="0,,,;1,,,;2,x1,0,1;3,x2,2,1">
+        <button type="submit">Generate BDD</button>
+    </form>
+
+    <canvas id="bddCanvas" width="800" height="600"></canvas>
+    <script src="script.js"></script>
+</body>
+
+</html>
