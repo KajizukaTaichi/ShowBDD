@@ -5,43 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShowBDD</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-
         canvas {
             border: 1px solid black;
-            margin-top: 20px;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            margin-top: 20px;
-        }
-
-        label,
-        input {
-            margin: 5px;
+            margin-top: 3vh;
         }
     </style>
 </head>
 
 <body>
-    <h1>ShowBDD</h1>
+    <div class="container mt-5">
+        <h1>ShowBDD</h1>
+        <form id="bddForm">
+            <div class="mb-3">
+                <label for="nodes" class="form-label">Nodes (comma-separated, format: id,variable,low,high):</label>
+                <input type="text" id="nodes" name="nodes" class="form-control" value="0,,,;1,,,;2,x1,0,1;3,x2,2,1">
+            </div>
+            <button type="submit" class="btn btn-primary">Generate BDD</button>
+        </form>
+        <canvas id="bddCanvas" class="alert"></canvas>
+    </div>
 
-    <form id="bddForm">
-        <label for="nodes">Nodes (comma-separated, format: id,variable,low,high):</label>
-        <input type="text" id="nodes" name="nodes" value="0,,,;1,,,;2,x1,0,1;3,x2,2,1">
-        <button type="submit">Generate BDD</button>
-    </form>
-
-    <canvas id="bddCanvas" width="800" height="600"></canvas>
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
     <script src="script.js"></script>
 </body>
 
