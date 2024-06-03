@@ -1,2 +1,2 @@
 # ShowBDD
-Generator of  binary decision diagram using JavaScript
+Show binary decision diagram using JavaScript 
